@@ -274,3 +274,134 @@ Here are some commonly used SQL string functions along with syntax examples:
 - **EXTRACT**: Extract a specific part of a date.
 - **TRUNC**: Truncate a date to a specified unit.
 
+## **Conversion Functions**
+Conversion functions in SQL are used to convert data from one data type to another. Here are the commonly used conversion functions with syntax and examples:
+
+### 1. **`TO_CHAR()`**
+   - **Purpose:** Converts a date, number, or other data types into a string format.
+   - **Syntax:**
+     ```sql
+     TO_CHAR(expression, format)
+     ```
+   - **Example (Converting Date to String):**
+     ```sql
+     SELECT TO_CHAR(SYSDATE, 'DD-Mon-YYYY') AS current_date
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     CURRENT_DATE
+     --------------
+     07-Nov-2024
+     ```
+
+   - **Example (Converting Number to String):**
+     ```sql
+     SELECT TO_CHAR(123456.789, '999,999.99') AS formatted_number
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     FORMATTED_NUMBER
+     -----------------
+     123,456.79
+     ```
+
+---
+
+### 2. **`TO_NUMBER()`**
+   - **Purpose:** Converts a string or other data type to a numeric value.
+   - **Syntax:**
+     ```sql
+     TO_NUMBER(expression, format)
+     ```
+   - **Example (Converting String to Number):**
+     ```sql
+     SELECT TO_NUMBER('12345.67', '99999.99') AS converted_number
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     CONVERTED_NUMBER
+     -----------------
+     12345.67
+     ```
+
+   - **Example (Converting Date to Number):**
+     ```sql
+     SELECT TO_NUMBER(TO_CHAR(SYSDATE, 'YYYYMMDD')) AS date_in_number
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     DATE_IN_NUMBER
+     ---------------
+     20241107
+     ```
+
+---
+
+### 3. **`TO_DATE()`**
+   - **Purpose:** Converts a string to a date format.
+   - **Syntax:**
+     ```sql
+     TO_DATE(expression, format)
+     ```
+   - **Example (Converting String to Date):**
+     ```sql
+     SELECT TO_DATE('07-Nov-2024', 'DD-Mon-YYYY') AS converted_date
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     CONVERTED_DATE
+     ---------------
+     07-NOV-24
+     ```
+
+   - **Example (Converting Date to a Different Format):**
+     ```sql
+     SELECT TO_DATE('20241107', 'YYYYMMDD') AS formatted_date
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     FORMATTED_DATE
+     ---------------
+     07-NOV-24
+     ```
+
+---
+
+### 4. **`CAST()`**
+   - **Purpose:** Converts one data type to another, such as converting a string to a date or number.
+   - **Syntax:**
+     ```sql
+     CAST(expression AS target_data_type)
+     ```
+   - **Example (Converting String to Date):**
+     ```sql
+     SELECT CAST('2024-11-07' AS DATE) AS date_value
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     DATE_VALUE
+     -----------
+     07-NOV-24
+     ```
+
+   - **Example (Converting Number to Integer):**
+     ```sql
+     SELECT CAST('12345.67' AS INTEGER) AS integer_value
+     FROM dual;
+     ```
+     **Output:**
+     ```
+     INTEGER_VALUE
+     --------------
+     12345
+     ```
+
+---
+
