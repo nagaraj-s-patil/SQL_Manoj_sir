@@ -5,7 +5,7 @@
 
 | Function Type              | Description                            | Link                        |
 |----------------------------|----------------------------------------|-----------------------------|
-| **Single-Row Functions**   | Functions that operate on individual rows. | [Single-Row Functions.md](Single-Row-Functions.md) |
-| **Multi-Row Functions**    | Functions that operate on groups of rows. | [Multi-Row Functions.md](Multi-Row-Functions.md)    |
-|**JOIN**                    | combine rows from two or more tables based on a related column.| [JOIN.md](JOIN.md)|
+| **Single-Row Functions**   | Functions that operate on individual rows. | [Single-Row Functions](Single-Row-Functions.md) |
+| **Multi-Row Functions**    | Functions that operate on groups of rows. | [Multi-Row Functions](Multi-Row-Functions.md)    |
+|**JOIN**                    | combine rows from two or more tables based on a related column.| [JOIN](JOIN.md)|
 
