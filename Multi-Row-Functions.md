@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/f9780df9-fcce-4f77-9b67-3e27199fee96)
-![image](https://github.com/user-attachments/assets/606ba2ea-d0d6-46b2-9488-7b95d2a85344)
+
 
 # **Multi-Row Functions:-**
 Here’s an explanation and examples of various **Miscellaneous Functions** in SQL, focusing on commonly used ones:
