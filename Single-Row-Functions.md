@@ -139,3 +139,138 @@ Here are some commonly used SQL string functions along with syntax examples:
      SELECT FLOOR(123.45) AS FloorValue;
      ```
      **Result**: `123`
+     ## **Date Functions**
+     Date functions in SQL are used to manipulate and perform operations on date and time data types. Below are some commonly used **Date Functions** along with their syntax and examples:
+
+### 1. **SYSDATE**
+   - **Purpose**: Returns the current system date and time.
+   - **Syntax**:
+     ```sql
+     SYSDATE
+     ```
+   - **Example**:
+     ```sql
+     SELECT SYSDATE FROM dual;
+     ```
+     This query returns the current date and time based on the system's clock.
+
+### 2. **CURRENT_DATE**
+   - **Purpose**: Returns the current date and time based on the database's time zone.
+   - **Syntax**:
+     ```sql
+     CURRENT_DATE
+     ```
+   - **Example**:
+     ```sql
+     SELECT CURRENT_DATE FROM dual;
+     ```
+     This query returns the current date and time in the time zone of the database server.
+
+### 3. **ADD_MONTHS**
+   - **Purpose**: Adds or subtracts a specified number of months to/from a date.
+   - **Syntax**:
+     ```sql
+     ADD_MONTHS(date, number_of_months)
+     ```
+   - **Example**:
+     ```sql
+     SELECT ADD_MONTHS('2024-01-15', 3) FROM dual;
+     ```
+     This query adds 3 months to the given date and returns `'2024-04-15'`.
+
+### 4. **MONTHS_BETWEEN**
+   - **Purpose**: Returns the number of months between two dates.
+   - **Syntax**:
+     ```sql
+     MONTHS_BETWEEN(date1, date2)
+     ```
+   - **Example**:
+     ```sql
+     SELECT MONTHS_BETWEEN('2024-12-01', '2024-01-01') FROM dual;
+     ```
+     This query returns `11`, which is the number of months between January 1, 2024, and December 1, 2024.
+
+### 5. **NEXT_DAY**
+   - **Purpose**: Returns the next date of the specified weekday after a given date.
+   - **Syntax**:
+     ```sql
+     NEXT_DAY(date, weekday)
+     ```
+   - **Example**:
+     ```sql
+     SELECT NEXT_DAY('2024-11-07', 'MONDAY') FROM dual;
+     ```
+     This query returns `'2024-11-11'`, which is the next Monday after November 7, 2024.
+
+### 6. **LAST_DAY**
+   - **Purpose**: Returns the last day of the month for the specified date.
+   - **Syntax**:
+     ```sql
+     LAST_DAY(date)
+     ```
+   - **Example**:
+     ```sql
+     SELECT LAST_DAY('2024-11-07') FROM dual;
+     ```
+     This query returns `'2024-11-30'`, which is the last day of November 2024.
+
+### 7. **TO_CHAR**
+   - **Purpose**: Converts a date to a string in a specified format.
+   - **Syntax**:
+     ```sql
+     TO_CHAR(date, format)
+     ```
+   - **Example**:
+     ```sql
+     SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') FROM dual;
+     ```
+     This query converts the current date and time to a string in the format `YYYY-MM-DD HH24:MI:SS`.
+
+### 8. **TO_DATE**
+   - **Purpose**: Converts a string to a date based on the specified format.
+   - **Syntax**:
+     ```sql
+     TO_DATE(string, format)
+     ```
+   - **Example**:
+     ```sql
+     SELECT TO_DATE('2024-11-07', 'YYYY-MM-DD') FROM dual;
+     ```
+     This query converts the string `'2024-11-07'` into a date value.
+
+### 9. **EXTRACT**
+   - **Purpose**: Extracts a specific part (like year, month, day, etc.) from a date.
+   - **Syntax**:
+     ```sql
+     EXTRACT(part FROM date)
+     ```
+   - **Example**:
+     ```sql
+     SELECT EXTRACT(YEAR FROM SYSDATE) FROM dual;
+     ```
+     This query returns the current year.
+
+### 10. **TRUNC**
+   - **Purpose**: Truncates the date to a specified unit (e.g., day, month, year).
+   - **Syntax**:
+     ```sql
+     TRUNC(date, format)
+     ```
+   - **Example**:
+     ```sql
+     SELECT TRUNC(SYSDATE, 'MM') FROM dual;
+     ```
+     This query truncates the current date to the first day of the current month.
+
+### Summary of Date Functions in SQL:
+- **SYSDATE**: Current system date and time.
+- **CURRENT_DATE**: Current date and time based on database time zone.
+- **ADD_MONTHS**: Add or subtract months from a date.
+- **MONTHS_BETWEEN**: Number of months between two dates.
+- **NEXT_DAY**: Next specified weekday after a given date.
+- **LAST_DAY**: Last day of the month for a given date.
+- **TO_CHAR**: Convert a date to a string in a specified format.
+- **TO_DATE**: Convert a string to a date in a specified format.
+- **EXTRACT**: Extract a specific part of a date.
+- **TRUNC**: Truncate a date to a specified unit.
+
