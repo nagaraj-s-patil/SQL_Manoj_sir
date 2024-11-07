@@ -1,4 +1,4 @@
-##String Functions:-
+## **String Functions:-**
 Here are some commonly used SQL string functions along with syntax examples:
 
 ### 1. **UPPER()**
