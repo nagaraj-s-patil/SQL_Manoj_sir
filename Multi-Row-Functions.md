@@ -1,3 +1,4 @@
+https://www.techbooky.com/wp-content/uploads/2020/11/SQL-image.jpg
 # **Multi-Row Functions:-**
 Here’s an explanation and examples of various **Miscellaneous Functions** in SQL, focusing on commonly used ones:
 
