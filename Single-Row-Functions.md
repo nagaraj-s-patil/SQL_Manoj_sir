@@ -82,4 +82,60 @@ Here are some commonly used SQL string functions along with syntax examples:
      ```sql
      SELECT REPLACE(first_name, 'o', 'a') AS modified_name FROM employees;
      ```
-   - **Result:** Replaces `o` with `a` in `first_name`, so `"John"` becomes `"Jahn"`. 
+   - **Result:** Replaces `o` with `a` in `first_name`, so `"John"` becomes `"Jahn"`.
+## **Numeric Functions:-**
+   Here's a breakdown of common SQL **Numeric Functions** with syntax and examples to illustrate how each one works:
+
+### 1. **`ROUND()`**
+   - **Purpose**: Rounds a number to a specified number of decimal places.
+   - **Syntax**: `ROUND(number, decimal_places)`
+   - **Example**:
+     ```sql
+     SELECT ROUND(123.4567, 2) AS RoundedNumber;
+     ```
+     **Result**: `123.46`
+
+### 2. **`TRUNC()`**
+   - **Purpose**: Truncates (cuts off) a number to a specified number of decimal places without rounding.
+   - **Syntax**: `TRUNC(number, decimal_places)`
+   - **Example**:
+     ```sql
+     SELECT TRUNC(123.4567, 2) AS TruncatedNumber;
+     ```
+     **Result**: `123.45`
+
+### 3. **`MOD()`**
+   - **Purpose**: Returns the remainder of a division between two numbers.
+   - **Syntax**: `MOD(number, divisor)`
+   - **Example**:
+     ```sql
+     SELECT MOD(10, 3) AS Modulus;
+     ```
+     **Result**: `1` (because 10 divided by 3 leaves a remainder of 1)
+
+### 4. **`ABS()`**
+   - **Purpose**: Returns the absolute (non-negative) value of a number.
+   - **Syntax**: `ABS(number)`
+   - **Example**:
+     ```sql
+     SELECT ABS(-25.5) AS AbsoluteValue;
+     ```
+     **Result**: `25.5`
+
+### 5. **`CEIL()`**
+   - **Purpose**: Rounds a number up to the nearest integer.
+   - **Syntax**: `CEIL(number)`
+   - **Example**:
+     ```sql
+     SELECT CEIL(123.45) AS CeilValue;
+     ```
+     **Result**: `124`
+
+### 6. **`FLOOR()`**
+   - **Purpose**: Rounds a number down to the nearest integer.
+   - **Syntax**: `FLOOR(number)`
+   - **Example**:
+     ```sql
+     SELECT FLOOR(123.45) AS FloorValue;
+     ```
+     **Result**: `123`
