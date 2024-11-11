@@ -9,3 +9,4 @@
 | **Multi-Row Functions**    | Functions that operate on groups of rows. | [Multi-Row Functions](Multi-Row-Functions.md)    |
 |**JOIN**                    | combine rows from two or more tables based on a related column.| [JOIN](JOIN.md)|
 |**DDL (Data Definition Language)**|DL is a subset of SQL (Structured Query Language) used for defining| [DDL](DDLcommand.md)|
+|**group By |The GROUP BY clause in SQL is used to arrange identical data into groups, typically in combination with aggregate functions| [grop By](groupBy)|
